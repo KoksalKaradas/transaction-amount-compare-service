@@ -1,18 +1,19 @@
 package com.assignment.demo.model.event;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.math.BigDecimal;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class KafkaTransactionMessage implements Serializable {
+public class KafkaTransactionMessage {
 
-  private static final long serialVersionUID = 1L;
-
+  @JsonProperty("PID")
   Integer PID;
+  @JsonProperty("PAMOUNT")
   BigDecimal PAMOUNT;
+  @JsonProperty("PDATA")
   String PDATA;
 
 }
